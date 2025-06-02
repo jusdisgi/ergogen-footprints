@@ -1,10 +1,33 @@
+// LED Load Switch ergogen footprint
+// Author: Hunter Cook @huntercook https://github.com/jusdisgi
+// Canonical location: https://github.com/jusdisgi/ergogen-footprints/blob/main/led_load_switch.js
+//
+// made with kicad2ergogen https://kicad2ergogen.genteure.com/
+// based on schematic included in the ebastler ZMK design guide: https://github.com/ebastler/zmk-designguide
+//
+// This may well be bad behavior...this footprint is actually kind of a composite. 
+// It includes pads for 3 resistors and 2 MOSFETs, and "traces" to connect them which are actually long/skinny pads.
+//
+// To build the circuit you need:
+// 1x 100 Ohm 0603 resistor
+// 2x 10k Ohm 0603 resistors
+// 1x 2N7002 SOT23 MOSFET
+// 1x AO3401A SOT23 MOSFET
+//
+// Nets/Parameters:
+//
+// side: F (default) for Front, B for Back
+// P1: Control, connects to GPIO pin on MCU. Default net "LED_SW"
+// P2: Power input. Default net "5V"
+// P3: Power output. Desault net "LED_PWR"
+
 module.exports = {
   params: {
     designator: 'XX',
     side: 'F',
-    P1: { type: 'net', value: undefined },
-    P2: { type: 'net', value: undefined },
-    P3: { type: 'net', value: undefined },
+    P1: { type: 'net', value: 'LED_SW' },
+    P2: { type: 'net', value: '5V' },
+    P3: { type: 'net', value: 'LED_PWR' },
   },
   body: p => {
     const fp = [];

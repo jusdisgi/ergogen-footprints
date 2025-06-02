@@ -1,7 +1,9 @@
-// Ergogen footprint for Kailh PG1316S "Ultra Low Profile" keyswitches
-// By Hunter Cook @huntercook https://github.com/jusdisgi
+// Kailh PG1316S "Ultra Low Profile" keyswitch ergogen footprint
+// author: Hunter Cook @huntercook https://github.com/jusdisgi
+// Canonical location: https://github.com/jusdisgi/ergogen-footprints/blob/main/switch_pg1316s.js
+//
 // Based on KiCad Footprints by Mike Holscher available at: https://github.com/mikeholscher/zmk-config-mikefive/blob/main/files/footprint-and-cad/
-
+//
 // Nets:
 //    from: corresponds to pin 1
 //    to: corresponds to pin 2

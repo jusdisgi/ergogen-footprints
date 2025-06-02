@@ -1,15 +1,18 @@
 // SMD SOD-323F Diode ergogen footprint
-// 
+// Author: Hunter Cook @huntercook https://github.com/jusdisgi
+// Canonical location: https://github.com/jusdisgi/ergogen-footprints/blob/main/diode_smd_sod323f.js
+//
 // Created with https://kicad2ergogen.genteure.com/
-// kicad footprint D_SOD-323F which comes with
+// Based on kicad footprint D_SOD-323F which comes with
 // kicad in ${KICAD9_FOOTPRINT_DIR}/Diode_SMD.pretty/D_SOD-323F.kicad_mod
 //
-// Tiny edits by @huntercook https://github.com/jusdisgi
 //
-// Only changes were making the preconfigured nets into the from/to params
-// and removing the fp.push('version') line...I don't know wnat the prolem
-// is with that line but it's a known bug so if you use the above tool, delete
-// the version line and it should work better!
+// Nets/Parameters
+//
+// side: F (default) for Front, B for Back
+// 
+// from: undefined
+// to: undefined
 
 module.exports = {
   params: {

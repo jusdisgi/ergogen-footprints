@@ -1,3 +1,20 @@
+// NeoPixel LED WS2812B-2020 ergogen footprint
+// Author: Hunter Cook @huntercook https://github.com/jusdisgi
+// Canonical location: https://github.com/jusdisgi/ergogen-footprints/blob/main/led_ws2812b_2020.js
+//
+// created with kicad2ergogen: https://kicad2ergogen.genteure.com/
+//
+// Component datasheet: https://www.lcsc.com/datasheet/lcsc_datasheet_2412051755_Worldsemi-WS2812B-2020_C965555.pdf
+//
+// Nets/Parameters
+//
+// side: F (default) for Front, B for Back
+// 
+// P1: Power input. Default net "VCC"
+// P2: Data input. Default net undefined
+// P3: Ground pin. Default net "GND"
+// P4: Data output. Default net undefined
+
 module.exports = {
   params: {
     designator: 'LED',

@@ -1,6 +1,7 @@
-//CKW12 DIY Roller Encoder Footprint
-//author: @huntercook https://github.com/jusdisgi
-//made with kicad2ergogen https://kicad2ergogen.genteure.com/
+// CKW12 DIY Roller Encoder Footprint
+// Author: Hunter Cook @huntercook https://github.com/jusdisgi
+// made with kicad2ergogen https://kicad2ergogen.genteure.com/
+// Canonical location: https://github.com/jusdisgi/ergogen-footprints/blob/main/roller_encoder_ckw12.js
 //
 //Based on CKW12 design by Kumamuk available here: https://github.com/kumamuk-git/CKW12
 //Adapted to be integrated into the main PCB instead of on a daughter board.

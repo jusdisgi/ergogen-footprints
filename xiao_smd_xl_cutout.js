@@ -1,3 +1,10 @@
+// Seeed Xiao nRF52840 ergogen footprint for hand soldering
+// 
+// I think @hand_le made this one but I'm not sure.
+// It has cutouts on the back so you can hand-solder the battery pins under the MCU
+// I haven't ever used it.
+// Vaya con Dios.
+
 module.exports = {
     params: {
         designator: 'MCU',

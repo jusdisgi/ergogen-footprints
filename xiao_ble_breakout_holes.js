@@ -1,8 +1,12 @@
-// Arduino ProMicro atmega32u4au
-// Params
-//  orientation: default is down
-//    if down, power led will face the pcb
-//    if up, power led will face away from pcb
+// Breakout holes for Seeed Xiao nRF52840 MCU ergogen footprint
+// Author: Hunter Cook @huntercook https://github.com/jusdisgi
+// Canonical location: https://github.com/jusdisgi/ergogen-footprints/blob/main/util_xiao_ble_breakout_holes.js
+// 
+// These are just a bunck of thru-hole pads intended to go around the xiao cutouts for testing or connections.
+//
+//
+// The params are roughly equivalent to the MCU itself.
+
 
 module.exports = {
   params: {

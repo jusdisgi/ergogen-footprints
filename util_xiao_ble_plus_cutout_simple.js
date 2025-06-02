@@ -1,3 +1,13 @@
+// Board cutout for Seeed Xiao nRF52840 Plus MCU ergogen footprint
+// Author: Hunter Cook @huntercook https://github.com/jusdisgi
+// Canonical location: https://github.com/jusdisgi/ergogen-footprints/blob/main/util_xiao_ble_plus_cutout_simple.js
+// 
+// This is just a board cutout, intended to allow flush-mounting the MCU so that its surface is at the
+// same height as the PCB itself. Frankly I have no idea if it will work at all. This is the simple version
+// with straight edge cuts.
+//
+// The params are roughly equivalent to the MCU itself.
+
 module.exports = {
   params: {
     designator: 'J',

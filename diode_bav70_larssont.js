@@ -1,5 +1,8 @@
 // BAV70 diode, designed around the BAV70 RFG from Taiwan Semiconductor
 // See https://services.taiwansemi.com/storage/resources/datasheet/BAW56%20SERIES_I2001.pdf
+
+// Canonical location: https://github.com/larssont/ergogen-footprints/blob/main/bav70.js
+//
 module.exports = {
     params: {
         designator: "D",

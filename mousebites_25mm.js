@@ -1,3 +1,17 @@
+// 2.5mm Mousebites ergogen footprint
+// Author: Hunter Cook @huntercook https://github.com/jusdisgi
+// Canonical location: https://github.com/jusdisgi/ergogen-footprints/blob/main/mousebites_25mm.js
+//
+// made with kicad2ergogen https://kicad2ergogen.genteure.com/
+// based on marbastlib kicad footprint here: https://github.com/ebastler/marbastlib/blob/main/footprints/marbastlib-various.pretty/mousebites_2.5mm.kicad_mod
+//
+
+//
+// Parameter
+//
+// side: F (default) for Front, B for Back
+
+
 module.exports = {
   params: {
     designator: 'XX',
