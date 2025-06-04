@@ -1,10 +1,10 @@
 // Molex PicoBlade 1x8 Wire-to-Board connector - Vertical plug, surface mount.
 // Author: Hunter Cook @huntercook https://github.com/jusdisgi
-// Canonical location: https://github.com/jusdisgi/ergogen-footprints/blob/main/conn_molex_picoblade_smd_1x08_1mm25_horiz.js
+// Canonical location: https://github.com/jusdisgi/ergogen-footprints/blob/main/conn_molex_picoblade_smd_1x08_1mm25_vert.js
 //
 // created with kicad2ergogen: https://kicad2ergogen.genteure.com/
 //
-// Component datasheet: https://www.lcsc.com/datasheet/lcsc_datasheet_2312011610_Megastar-ZX-MX1-25-8PWT_C19272381.pdf
+// Component datasheet: https://www.lcsc.com/product-detail/Wire-To-Board-Connector_MOLEX-533980871_C471413.html
 //
 // Nets/Parameters
 //
