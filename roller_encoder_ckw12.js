@@ -3,8 +3,13 @@
 // made with kicad2ergogen https://kicad2ergogen.genteure.com/
 // Canonical location: https://github.com/jusdisgi/ergogen-footprints/blob/main/roller_encoder_ckw12.js
 //
-//Based on CKW12 design by Kumamuk available here: https://github.com/kumamuk-git/CKW12
-//Adapted to be integrated into the main PCB instead of on a daughter board.
+//
+// Based on CKW12 design by Kumamuk available here: https://github.com/kumamuk-git/CKW12
+// Adapted to be integrated into the main PCB instead of on a daughter board.
+// Also minor edits to pad positions; the A/B/C pads overhung the edge cuts on the original version, which
+// Caused KiCad errors when trying to run traces to/from those pads. I simply moved them 0.5mm further from
+// center on the X axis. It no longer exactly matches the datasheet design but it should work fine. If you
+// wish to revert to the Kumamuk pad positions, just change the 6 to 5.5 in the "at" for those pads.
 //
 // All 3D printed components are available at: https://github.com/kumamuk-git/CKW12/tree/main/3dmodel
 //
@@ -57,9 +62,9 @@ fp.push(`(pad "" smd roundrect (at ${(flip ? -6.5 : 6.5)} -3.75 ${p.r}) (size 2.
 fp.push(`(pad "" smd roundrect (at ${(flip ? -6.5 : 6.5)} 3.75 ${p.r}) (size 2.7 1.25) (layers "${(flip ? "B" : "F")}.Cu" "${(flip ? "B" : "F")}.Mask" "${(flip ? "B" : "F")}.Paste") (roundrect_rratio 0.25) (thermal_bridge_angle 45) )`);
 fp.push(`(pad "" np_thru_hole circle (at ${(flip ? -7 : 7)} -7 ${(p.r + 90) % 360}) (size 2.2 2.2) (drill 2.2) (layers "F&B.Cu" "*.Mask") )`);
 fp.push(`(pad "" np_thru_hole circle (at ${(flip ? -7 : 7)} 7 ${(p.r + 90) % 360}) (size 2.2 2.2) (drill 2.2) (layers "F&B.Cu" "*.Mask") )`);
-fp.push(`(pad "A" smd roundrect (at ${(flip ? -5.5 : 5.5)} 2 ${p.r}) (size 2 1) (layers "${(flip ? "B" : "F")}.Cu" "${(flip ? "B" : "F")}.Mask" "${(flip ? "B" : "F")}.Paste") (roundrect_rratio 0.25) (thermal_bridge_angle 45)  ${p.A})`);
-fp.push(`(pad "B" smd roundrect (at ${(flip ? -5.5 : 5.5)} 0 ${p.r}) (size 2 1) (layers "${(flip ? "B" : "F")}.Cu" "${(flip ? "B" : "F")}.Mask" "${(flip ? "B" : "F")}.Paste") (roundrect_rratio 0.25) (thermal_bridge_angle 45)  ${p.B})`);
-fp.push(`(pad "C" smd roundrect (at ${(flip ? -5.5 : 5.5)} -2 ${p.r}) (size 2 1) (layers "${(flip ? "B" : "F")}.Cu" "${(flip ? "B" : "F")}.Mask" "${(flip ? "B" : "F")}.Paste") (roundrect_rratio 0.25) (thermal_bridge_angle 45)  ${p.C})`);
+fp.push(`(pad "A" smd roundrect (at ${(flip ? -6 : 6)} 2 ${p.r}) (size 2 1) (layers "${(flip ? "B" : "F")}.Cu" "${(flip ? "B" : "F")}.Mask" "${(flip ? "B" : "F")}.Paste") (roundrect_rratio 0.25) (thermal_bridge_angle 45)  ${p.A})`);
+fp.push(`(pad "B" smd roundrect (at ${(flip ? -6 : 6)} 0 ${p.r}) (size 2 1) (layers "${(flip ? "B" : "F")}.Cu" "${(flip ? "B" : "F")}.Mask" "${(flip ? "B" : "F")}.Paste") (roundrect_rratio 0.25) (thermal_bridge_angle 45)  ${p.B})`);
+fp.push(`(pad "C" smd roundrect (at ${(flip ? -6 : 6)} -2 ${p.r}) (size 2 1) (layers "${(flip ? "B" : "F")}.Cu" "${(flip ? "B" : "F")}.Mask" "${(flip ? "B" : "F")}.Paste") (roundrect_rratio 0.25) (thermal_bridge_angle 45)  ${p.C})`);
 fp.push(`(pad "S1" smd rect (at ${(flip ? 7 : -7)} 3 ${(p.r + 90) % 360}) (size 2 1) (layers "${(flip ? "B" : "F")}.Cu" "${(flip ? "B" : "F")}.Mask" "${(flip ? "B" : "F")}.Paste") (thermal_bridge_angle 45)  ${p.S1})`);
 fp.push(`(pad "S2" smd rect (at ${(flip ? 7 : -7)} -3 ${(p.r + 90) % 360}) (size 2 1) (layers "${(flip ? "B" : "F")}.Cu" "${(flip ? "B" : "F")}.Mask" "${(flip ? "B" : "F")}.Paste") (thermal_bridge_angle 45)  ${p.S2})`);
 
