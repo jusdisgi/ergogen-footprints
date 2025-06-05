@@ -37,6 +37,10 @@ module.exports = {
     A: { type: 'net', value: 'RE_A' },
     B: { type: 'net', value: 'GND' },
     C: { type: 'net', value: 'RE_C' },
+    roller_3dmodel_filename: '\${MODELS}/cwk12_roller_enc.step',
+    roller_3dmodel_xyz_offset: [0, 0, 0],
+    roller_3dmodel_xyz_rotation: [0, 0, 0],
+    roller_3dmodel_xyz_scale: [1, 1, 1],
   },
   body: p => {
     const fp = [];
@@ -105,6 +109,9 @@ fp.push(`(fp_rect (start ${(flip ? 9 : -9)} -9) (end ${(flip ? -9 : 9)} 9) (stro
 // fp.push(`(property "Value" "CKW12" (at 0 1 ${(p.r + 0) % 360}) (unlocked yes) (layer "${(flip ? "B.Fab" : "F.Fab")}")  (effects (font (size 1 1) (thickness 0.15)) (justify${ flip ? " mirror" : ""})))`);
 // fp.push(`(property "Datasheet" "" (at 0 0 ${(p.r + 0) % 360}) (unlocked yes) (layer "${(flip ? "B.Fab" : "F.Fab")}") (hide yes)  (effects (font (size 1 1) (thickness 0.15)) (justify${ flip ? " mirror" : ""})))`);
 // fp.push(`(property "Description" "" (at 0 0 ${(p.r + 0) % 360}) (unlocked yes) (layer "${(flip ? "B.Fab" : "F.Fab")}") (hide yes)  (effects (font (size 1 1) (thickness 0.15)) (justify${ flip ? " mirror" : ""})))`);
+
+//3D Model
+fp.push(`(model ${p.roller_3dmodel_filename} (offset (xyz ${p.roller_3dmodel_xyz_offset[0]} ${p.roller_3dmodel_xyz_offset[1]} ${p.roller_3dmodel_xyz_offset[2]})) (scale (xyz ${p.roller_3dmodel_xyz_scale[0]} ${p.roller_3dmodel_xyz_scale[1]} ${p.roller_3dmodel_xyz_scale[2]})) (rotate (xyz ${p.roller_3dmodel_xyz_rotation[0]} ${p.roller_3dmodel_xyz_rotation[1]} ${p.roller_3dmodel_xyz_rotation[2]})))`);
 
     fp.push(')');
     return fp.join('\n');

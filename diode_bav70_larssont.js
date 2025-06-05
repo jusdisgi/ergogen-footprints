@@ -1,8 +1,5 @@
 // BAV70 diode, designed around the BAV70 RFG from Taiwan Semiconductor
 // See https://services.taiwansemi.com/storage/resources/datasheet/BAW56%20SERIES_I2001.pdf
-
-// Canonical location: https://github.com/larssont/ergogen-footprints/blob/main/bav70.js
-//
 module.exports = {
     params: {
         designator: "D",
@@ -14,7 +11,11 @@ module.exports = {
         swap_nets: false,
         A1: { type: "net", value: undefined },
         A2: { type: "net", value: undefined },
-        C: { type: "net", value: undefined },
+        C: { type: "net", value: undefined },    
+        diode_3dmodel_filename: '\${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOT-23.step',
+        diode_3dmodel_xyz_offset: [0, 0, 0],
+        diode_3dmodel_xyz_rotation: [0, 0, 90],
+        diode_3dmodel_xyz_scale: [1, 1, 1],
     },
 
     body: (p) => {
@@ -105,6 +106,8 @@ module.exports = {
                 ${pad(a1x, ay, p.A1)}
                 ${pad(a2x, ay, p.A2)}
                 ${pad(cx, cy, p.C)}
+                (model ${p.diode_3dmodel_filename} (offset (xyz ${p.diode_3dmodel_xyz_offset[0]} ${p.diode_3dmodel_xyz_offset[1]} ${p.diode_3dmodel_xyz_offset[2]})) (scale (xyz ${p.diode_3dmodel_xyz_scale[0]} ${p.diode_3dmodel_xyz_scale[1]} ${p.diode_3dmodel_xyz_scale[2]})) (rotate (xyz ${p.diode_3dmodel_xyz_rotation[0]} ${p.diode_3dmodel_xyz_rotation[1]} ${p.diode_3dmodel_xyz_rotation[2]})))
+
         )`;
     },
 };
