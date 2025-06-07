@@ -30,7 +30,7 @@ fp.push(`(footprint "LCD_1.69_Waveshare"`);
 fp.push(p.at);
 fp.push(`(layer "${(flip ? "B.Cu" : "F.Cu")}")`);
 fp.push(`(property "Reference" "${p.ref}" ${p.ref_hide} (at 0 0 ${p.r}) (layer "${p.side}.SilkS") (effects (font (size 1 1) (thickness 0.15))${ p.side === "B" ? " (justify mirror)" : ""}))`);
-
+fp.push(`(attr board_only)`); //Do not include in schematic
 fp.push(`(attr smd)`);
 
 // Unknown to kicad2ergogen
