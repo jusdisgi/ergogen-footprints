@@ -10,19 +10,19 @@
 //
 // side: F (default) for Front, B for Back
 // 
-// P1: Power input. Default net "VCC"
-// P2: Data input. Default net undefined
-// P3: Ground pin. Default net "GND"
-// P4: Data output. Default net undefined
+// P1: Data output. Default net undefined
+// P2: Ground pin. Default net "GND"
+// P3: Data input. Default net undefined
+// P4: Power input. Default net "VCC"
 
 module.exports = {
   params: {
     designator: 'LED',
     side: 'F',
-    P1: { type: 'net', value: 'VCC' },
-    P2: { type: 'net', value: undefined },
+    P1: { type: 'net', value: undefined },
+    P2: { type: 'net', value: 'GND' },
     P3: { type: 'net', value: undefined },
-    P4: { type: 'net', value: 'GND' },    
+    P4: { type: 'net', value: 'VCC' },    
     p1_via: false,
     p1_via_size: 0.5, //Max fitting inside pad is 0.5mm, JLCPCB no-extra-charge minimum 0.4mm. 
     p1_via_hole: 0.3, //JLCPCB no-extra-charge minimum 0.3mm
