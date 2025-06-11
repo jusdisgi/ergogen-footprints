@@ -1,4 +1,11 @@
 // Molex Pico EZMate Plus 1x02 Connector ergogen footprint
+//
+// NOT TO BE CONFUSED WITH Molex Pico EZMate
+// The "Plus" is a different part with 1.0mm pitch instead of 1.2mm
+// For the regular, non-Plus part, use ceoloide's footprint here: https://github.com/ceoloide/ergogen-footprints/blob/main/battery_connector_molex_pico_ezmate_1x02.js
+// (Yes, I made that mistake in reverse and ordered the plus ones and that's why this footprint exists.)
+//
+//
 // Author: Hunter Cook @huntercook https://github.com/jusdisgi
 // Canonical location: https://github.com/jusdisgi/ergogen-footprints/blob/main/conn_molex_picoblade_tht_1x08_1mm25_horiz.js
 //
